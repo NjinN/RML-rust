@@ -1,0 +1,63 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'RML-rust'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=RML-rust",
+                    "--package=RML-rust"
+                ],
+                "filter": {
+                    "name": "RML-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'RML-rust'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=RML-rust",
+                    "--package=RML-rust"
+                ],
+                "filter": {
+                    "name": "RML-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "Rust Debug",
+        //     "cargo": {
+        //         "args": [
+        //             "build",
+        //             "--bin=这里写你的项目名",
+        //             "--package=这里写你的项目名"
+        //         ],
+        //         "filter": {
+        //             "name": "这里写你的项目名",
+        //             "kind": "bin"
+        //         }
+        //     },
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // }
+    ]
+}
